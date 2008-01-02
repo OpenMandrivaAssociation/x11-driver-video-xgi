@@ -26,14 +26,6 @@ Conflicts: xorg-x11-server < 7.0
 %description
 The X.org driver for Generic XGI Cards
 
-%package devel
-Summary: Development files for %{name}
-Group: Development/X11
-License: MIT
-
-%description devel
-Development files for %{name}
-
 %prep
 %setup -q -n xf86-video-xgi-%{version}
 
@@ -48,11 +40,7 @@ autoreconf -ifs
 %install
 rm -rf %{buildroot}
 %makeinstall_std
-# Create list of dependencies
-x-check-deps.pl
-for deps in *.deps; do
-    install -D -m 644 $deps %{buildroot}/%{_datadir}/X11/mandriva/$deps
-done
+rm -f %{buildroot}/%{_libdir}/xorg/modules/drivers/*.la
 
 %clean
 rm -rf %{buildroot}
@@ -61,8 +49,3 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_libdir}/xorg/modules/drivers/xgi_drv.so
 %{_mandir}/man4/xgi.*
-
-%files devel
-%defattr(-,root,root)
-%{_libdir}/xorg/modules/drivers/*.la
-%{_datadir}/X11/mandriva/*.deps
