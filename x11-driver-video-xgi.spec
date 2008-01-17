@@ -18,6 +18,7 @@ BuildRoot: %{_tmppath}/%{name}-root
 # git-format-patch xf86-video-xgi-1.5.0..origin/mandriva+gpl
 Patch1: 0001-Add-to-.gitignore-to-skip-patch-emacs-droppings.patch
 Patch2: 0002-Update-for-new-policy-of-hidden-symbols-and-common-m.patch
+Patch3: 0003-Fix-symbol-that-must-be-made-explicitly-visible.patch
 ########################################################################
 BuildRequires: x11-util-macros		>= 1.1.5-4mdk
 #BuildRequires: gcc			>= 4.2.2
@@ -35,6 +36,7 @@ The X.org driver for Generic XGI Cards
 
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 autoreconf -ifs
