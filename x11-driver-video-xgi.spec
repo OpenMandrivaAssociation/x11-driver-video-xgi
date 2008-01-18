@@ -25,6 +25,7 @@ BuildRequires: libdrm-devel		>= 2.3.0
 BuildRequires: libpixman-1-devel	>= 0.9.6
 BuildRequires: x11-proto-devel		>= 7.3
 BuildRequires: x11-server-devel		>= 1.4
+BuildRequires: libmesagl-devel		>= 7.0.2
 Conflicts: xorg-x11-server < 7.0
 
 %description
