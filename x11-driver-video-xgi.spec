@@ -21,6 +21,7 @@ Patch2: 0002-Update-for-new-policy-of-hidden-symbols-and-common-m.patch
 Patch3: 0003-Fix-symbol-that-must-be-made-explicitly-visible.patch
 ########################################################################
 BuildRequires: x11-util-macros		>= 1.1.5-4mdk
+BuildRequires: libdrm-devel		>= 2.3.0
 BuildRequires: libpixman-1-devel	>= 0.9.6
 BuildRequires: x11-proto-devel		>= 7.3
 BuildRequires: x11-server-devel		>= 1.4
