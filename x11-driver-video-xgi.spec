@@ -1,8 +1,6 @@
-%define debug_package	%{nil}
-
 Name: x11-driver-video-xgi
 Version: 1.5.0
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: The X.org driver for XGI Cards
 Group: Development/X11
 URL: http://xorg.freedesktop.org
