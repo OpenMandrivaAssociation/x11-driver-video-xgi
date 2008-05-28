@@ -18,7 +18,7 @@ Conflicts: xorg-x11-server < 7.0
 Patch1: 0001-Ensure-XGI-DriverRec-and-xgiModuleData-XF86ModuleDat.patch
 
 %description
-The X.org driver for Generic XGI Cards
+The X.org driver for Generic XGI Cards.
 
 %prep
 %setup -q -n xf86-video-xgi-%{version}
