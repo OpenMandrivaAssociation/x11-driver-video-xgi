@@ -2,7 +2,7 @@ Name: x11-driver-video-xgi
 Version: 1.5.0
 Release: %mkrel 3
 Summary: X.org driver for XGI Cards
-Group: Development/X11
+Group: System/X11
 URL: http://xorg.freedesktop.org
 Source: http://xorg.freedesktop.org/releases/individual/driver/xf86-video-xgi-%{version}.tar.bz2
 License: MIT
