@@ -13,7 +13,6 @@ BuildRequires: libpixman-1-devel	>= 0.9.6
 BuildRequires: x11-proto-devel		>= 7.3
 BuildRequires: x11-server-devel		>= 1.4
 BuildRequires: libmesagl-devel		>= 7.0.2
-BuildRequires: dos2unix
 Conflicts: xorg-x11-server < 7.0
 
 Patch1: 0001-Ensure-XGI-DriverRec-and-xgiModuleData-XF86ModuleDat.patch
@@ -24,8 +23,6 @@ x11-driver-video-xgi is the X.org driver for Generic XGI Cards.
 
 %prep
 %setup -q -n xf86-video-xgi-%{version}
-# This will make patch maintaining easier:
-dos2unix src/xgi_driver.c
 %apply_patches
 
 %build
