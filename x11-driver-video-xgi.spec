@@ -1,6 +1,6 @@
 Name: x11-driver-video-xgi
 Version: 1.6.0
-Release: %mkrel 2
+Release: %mkrel 3
 Summary: X.org driver for XGI Cards
 Group: System/X11
 URL: http://xorg.freedesktop.org
@@ -17,6 +17,7 @@ Conflicts: xorg-x11-server < 7.0
 
 Patch1: 0001-Ensure-XGI-DriverRec-and-xgiModuleData-XF86ModuleDat.patch
 Patch2: string-format-error.patch
+Patch3: 0002-Remove-xf86-LoaderRe-q-f-Sym-bols-Lists-and-their-sy.patch
 
 %description
 x11-driver-video-xgi is the X.org driver for Generic XGI Cards.
