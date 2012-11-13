@@ -1,0 +1,35 @@
+From a1d4b42a8e8bb2afadee7a5e0574264c69073f2e Mon Sep 17 00:00:00 2001
+From: Paulo Cesar Pereira de Andrade <pcpa@mandriva.com.br>
+Date: Tue, 12 Feb 2008 13:40:43 -0200
+Subject: [PATCH] Ensure XGI DriverRec and xgiModuleData XF86ModuleData are public symbols.
+
+This is required if module is compiled with hidden symbols.
+---
+ src/xgi_driver.c |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/xgi_driver.c b/src/xgi_driver.c
+index cb01f9d..e36bcee 100644
+--- a/src/xgi_driver.c
++++ b/src/xgi_driver.c
+@@ -163,7 +163,7 @@ static const struct pci_id_match xgi_device_match[] = {
+  * an upper-case version of the driver name.
+  */
+ 
+-DriverRec XGI = {
++_X_EXPORT DriverRec XGI = {
+     XGI_CURRENT_VERSION,
+     XGI_DRIVER_NAME,
+     XGIIdentify,
+@@ -337,7 +337,7 @@ static XF86ModuleVersionInfo xgiVersRec = {
+     {0, 0, 0, 0}
+ };
+ 
+-XF86ModuleData xgiModuleData = { &xgiVersRec, xgiSetup, NULL };
++_X_EXPORT XF86ModuleData xgiModuleData = { &xgiVersRec, xgiSetup, NULL };
+ 
+ /*** static string ***/
+ #ifdef XGIMERGED
+-- 
+1.5.3.5
+

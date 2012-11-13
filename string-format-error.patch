@@ -1,0 +1,19 @@
+diff -Nrup xf86-video-xgi-1.5.1/src/xgi_driver.c patched/src/xgi_driver.c
+--- xf86-video-xgi-1.5.1/src/xgi_driver.c	2010-02-17 17:10:44.894583394 -0200
++++ patched/src/xgi_driver.c	2010-02-17 17:10:22.884582578 -0200
+@@ -722,13 +722,13 @@ XGIErrorLog(ScrnInfoPtr pScrn, const cha
+         "**************************************************\n";
+ 
+     va_start(ap, format);
+-    xf86DrvMsg(pScrn->scrnIndex, X_ERROR, str);
++    xf86DrvMsg(pScrn->scrnIndex, X_ERROR, "%s", str);
+     xf86DrvMsg(pScrn->scrnIndex, X_ERROR, "                      ERROR:\n");
+     xf86VDrvMsgVerb(pScrn->scrnIndex, X_ERROR, 1, format, ap);
+     va_end(ap);
+     xf86DrvMsg(pScrn->scrnIndex, X_ERROR,
+                "                  END OF MESSAGE\n");
+-    xf86DrvMsg(pScrn->scrnIndex, X_ERROR, str);
++    xf86DrvMsg(pScrn->scrnIndex, X_ERROR, "%s", str);
+ }
+ 
+ #ifdef XSERVER_LIBPCIACCESS
