@@ -1,6 +1,6 @@
 Name: x11-driver-video-xgi
-Version: 1.6.0
-Release: 5
+Version: 1.6.1
+Release: 1
 Summary: X.org driver for XGI Cards
 Group: System/X11
 License: MIT
