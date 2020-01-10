@@ -23,7 +23,7 @@ x11-driver-video-xgi is the X.org driver for Generic XGI Cards.
 
 %prep
 %setup -qn xf86-video-xgi-%{version}
-%apply_patches
+%autopatch -p1
 
 %build
 %configure2_5x
