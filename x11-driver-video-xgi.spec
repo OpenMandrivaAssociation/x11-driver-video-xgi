@@ -4,7 +4,7 @@ Release: 1
 Summary: X.org driver for XGI Cards
 Group: System/X11
 License: MIT
-URL: http://xorg.freedesktop.org
+URL: https://xorg.freedesktop.org
 Source: http://xorg.freedesktop.org/releases/individual/driver/xf86-video-xgi-%{version}.tar.bz2
 Patch1: 0001-Ensure-XGI-DriverRec-and-xgiModuleData-XF86ModuleDat.patch
 Patch2: string-format-error.patch
