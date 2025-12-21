@@ -10,6 +10,11 @@ Patch1: 0001-Ensure-XGI-DriverRec-and-xgiModuleData-XF86ModuleDat.patch
 Patch2: string-format-error.patch
 Patch3: 0002-Remove-xf86-LoaderRe-q-f-Sym-bols-Lists-and-their-sy.patch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: x11-util-macros		>= 1.1.5
 BuildRequires: libdrm-devel		>= 2.3.0
 BuildRequires: libpixman-1-devel	>= 0.9.6
